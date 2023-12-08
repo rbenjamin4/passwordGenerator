@@ -27,12 +27,30 @@ console.log(charNumbers)
 let charSpecial = confirm('Would you like to include special characters?')
 console.log(charSpecial)
 
+if (!charLowerCase && !charUpperCase && !charNumbers && !charSpecial){
+  alert('Please select at least one character type')
+}
+
 // 3. Validate input (at least one character type selected)
 
 
 // 4. Generate password based on selected criteria
+let selectedCritera = ''
 
+if (charLowerCase){
+  selectedCritera += 'abcdefghijklmnopqrstuvwxyz'
+}
+if (charUpperCase){
+  selectedCritera += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+}
+if(charNumbers){
+  selectedCritera += '1234567890'
+}
+if(charSpecial){
+  selectedCritera += ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'
+}
 
+console.log(selectedCritera)
 // 5. Display password on the page
   return('Generated password')
 }
