@@ -9,6 +9,10 @@ function generatePassword() {
 // 1. Prompt user for length of password (b/w 8 and 128)
 let passwordLength = prompt('Please choose a password length between 8 and 128 characters.')
 console.log(passwordLength)
+// Validate input
+if (passwordLength < 8 || passwordLength > 128 || NaN) {
+  alert('Your password length is outside the required range of 8 and 128 characters.')
+}
 
 // 2. Prompt user for use of uppercase, lowercase, numbers, special characters
 let charLowerCase = confirm('Would you like to include lowercase letters?')
