@@ -12,6 +12,7 @@ console.log(passwordLength)
 // Validate input
 if (passwordLength < 8 || passwordLength > 128 || NaN) {
   alert('Your password length is outside the required range of 8 and 128 characters.')
+  return;
 }
 
 // 2. Prompt user for use of uppercase, lowercase, numbers, special characters
@@ -59,7 +60,7 @@ console.log(password)
 
 
 // 5. Display password on the page
-  return('Generated password')
+  return(password)
 }
 
 // Write password to the #password input
