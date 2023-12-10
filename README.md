@@ -5,7 +5,7 @@
 
 A user can generate a password in the browser. They are prompted to enter the length of the desired password and whether or not they want to include upper case, lower case, numbers, or special characters. They must choose at least one character type to include and the password must be between 8 and 128 characters long.
 
-![Alt text](images/passwordGenerator.pngpasswordGenerator.png?raw=true "Functional Password Generator in-browser")
+![Alt text](images/passwordGenerator.png?raw=true "Functional Password Generator in-browser")
 
 # Installation
 
