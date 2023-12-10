@@ -25,6 +25,7 @@ function generatePassword() {
   // Validate input (at least one character type selected)
   if (!charLowerCase && !charUpperCase && !charNumbers && !charSpecial) {
     alert('Please select at least one character type')
+    return;
   }
 
   // Provide character options
