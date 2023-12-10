@@ -33,24 +33,31 @@ if (!charLowerCase && !charUpperCase && !charNumbers && !charSpecial){
 
 // 3. Validate input (at least one character type selected)
 
-
-// 4. Generate password based on selected criteria
-let selectedCritera = ''
+let selectedCriteria = ''
+let password = ''
 
 if (charLowerCase){
-  selectedCritera += 'abcdefghijklmnopqrstuvwxyz'
+  selectedCriteria += 'abcdefghijklmnopqrstuvwxyz'
 }
 if (charUpperCase){
-  selectedCritera += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  selectedCriteria += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 }
 if(charNumbers){
-  selectedCritera += '1234567890'
+  selectedCriteria += '1234567890'
 }
 if(charSpecial){
-  selectedCritera += ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'
+  selectedCriteria += ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~'
 }
+console.log(selectedCriteria)
 
-console.log(selectedCritera)
+
+// 4. Generate password based on selected criteria
+for (let i=0; i < passwordLength; i++) {
+  password += selectedCriteria[Math.floor(Math.random() * selectedCriteria.length)]
+}
+console.log(password)
+
+
 // 5. Display password on the page
   return('Generated password')
 }
